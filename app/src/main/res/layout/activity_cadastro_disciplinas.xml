@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    android:orientation="vertical"
+    tools:context=".activities.CadastroDisciplinasActivity">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Disciplina"
+        android:textColorHint="#0085cb">
+
+        <EditText
+            android:id="@+id/edit_nome_disciplina"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:inputType="text"
+            android:textColorHint="#0085cb" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#0085cb">
+
+        <EditText
+            android:id="@+id/edit_professor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:inputType="textShortMessage"
+            android:hint="Professor"
+            android:textColor="#0085cb"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            android:text="Disciplina extra"
+            android:textSize="17sp"
+            android:textColor="#0085cb"/>
+
+        <Switch
+            android:id="@+id/switch_disciplina_extra"
+            android:layout_marginStart="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#0085cb"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_salvar_disciplina"
+        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/botao"
+        android:text="Salvar"
+        android:textColor="#fff"
+        android:layout_marginTop="70dp"
+        android:layout_gravity="center" />
+
+</LinearLayout>
+

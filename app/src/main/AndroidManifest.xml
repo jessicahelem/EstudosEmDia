@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.jessica.estudosemdias">
+
+    <application
+        android:name=".dal.App"
+        android:allowBackup="true"
+        android:appComponentFactory="whateverString"
+        android:icon="@mipmap/ic_launcher_icone_round"
+        android:label="Estudos em Dias"
+        android:roundIcon="@mipmap/ic_launcher_icone_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:appComponentFactory">
+        <activity android:name=".activities.VisualizarAnotacoes"
+            android:label="Visualizar Anotações"
+            android:parentActivityName=".activities.EventosActivity"></activity>
+        <activity android:name=".activities.CadastroAnotacoes"
+            android:label="Casdastro de Anotações"
+            android:parentActivityName=".activities.EventosActivity"/>
+        <activity android:name=".activities.CadastroEventos"
+            android:label="Cadastro de Eventos"
+            android:parentActivityName=".activities.EventosActivity"/>
+        <activity
+            android:name=".activities.EventosActivity"
+            android:label="Eventos"
+            android:parentActivityName=".activities.MenuActivity" />
+        <activity
+            android:name=".activities.MeusDadosActivity"
+            android:label="Meus Dados"
+            android:parentActivityName=".activities.MenuActivity" />
+        <activity
+            android:name=".activities.CadastroNotaFinalActivity"
+            android:label="Cadastro de Nota Final"
+            android:parentActivityName=".activities.CadastroNotasActivity" />
+        <activity
+            android:name=".activities.CadastroNotasActivity"
+            android:label="Cadastro de Notas"
+            android:parentActivityName=".activities.NotasActivity" />
+        <activity
+            android:name=".activities.NotasActivity"
+            android:label="Minhas Notas"
+            android:parentActivityName=".activities.MenuActivity" />
+        <activity
+            android:name=".activities.DisciplinasActivity"
+            android:label="Disciplinas"
+            android:parentActivityName=".activities.MenuActivity" />
+        <activity
+            android:name=".activities.CadastroDisciplinasActivity"
+            android:label="Cadastro de Disciplinas"
+            android:parentActivityName=".activities.DisciplinasActivity" />
+        <activity
+            android:name=".activities.MenuActivity"
+            android:parentActivityName=".activities.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.CadastroAlunoActivity"
+            android:label="Cadastro do Aluno"
+            android:parentActivityName=".activities.LoginActivity" />
+        <activity
+            android:name=".activities.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/adicionar_notas"
+        android:title="Adicionar notas" />
+
+    <item
+        android:id="@+id/adicionar_prova_final"
+        android:title="Adicionar Prova Final" />
+
+    <item
+        android:id="@+id/editar_disciplina"
+        android:title="Editar" />
+
+    <item
+        android:id="@+id/remover_disciplina"
+        android:title="Remover"/>
+
+</menu>

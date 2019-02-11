@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".activities.MenuActivity"
+    android:orientation = "vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
+        <TextView
+            android:id="@+id/textEstudo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:gravity="center|top"
+            android:text="@string/estudos_em_dia"
+            android:textColor="@android:color/white"
+            android:textSize="39sp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mainLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardiview_disciplinas"
+            android:layout_width="150dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_iconfinder_icon_book" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Disciplinas"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardview_eventos"
+            android:layout_width="150dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_iconfinder_icon_calendar" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/eventos"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="190dp"
+       android:orientation="horizontal"
+       android:padding="16dp"
+       >
+
+       <android.support.v7.widget.CardView
+           android:id="@+id/cardview_meus_dados"
+           android:layout_width="150dp"
+           android:layout_height="130dp"
+           android:layout_marginLeft="16dp"
+           android:layout_marginRight="16dp"
+           app:cardCornerRadius="8dp"
+           app:cardElevation="8dp">
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center_horizontal|center_vertical"
+               android:layout_margin="16dp"
+               android:orientation="vertical">
+
+               <ImageView
+                   android:layout_width="50dp"
+                   android:layout_height="50dp"
+                   android:layout_gravity="center_horizontal"
+                   android:src="@drawable/ic_iconfinder_icon_estudante" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Meus Dados"
+                   android:textAlignment="center"
+                   android:textColor="@android:color/black"
+                   android:textSize="18sp"
+                   android:textStyle="bold" />
+           </LinearLayout>
+       </android.support.v7.widget.CardView>
+
+       <android.support.v7.widget.CardView
+           android:id="@+id/cardview_sair"
+           android:layout_width="150dp"
+           android:layout_height="130dp"
+           android:layout_marginLeft="16dp"
+           android:layout_marginRight="16dp"
+           app:cardCornerRadius="8dp"
+           app:cardElevation="8dp">
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center_horizontal|center_vertical"
+               android:layout_margin="16dp"
+               android:orientation="vertical">
+
+               <ImageView
+                   android:layout_width="50dp"
+                   android:layout_height="50dp"
+                   android:layout_gravity="center_horizontal"
+                   android:contentDescription="@string/todo"
+                   android:src="@drawable/ic_iconfinder_icon_sair" />
+
+               <TextView
+                   android:layout_width="50dp"
+                   android:layout_height="50dp"
+                   android:text="@string/sair"
+                   android:textAlignment="center"
+                   android:textColor="@android:color/black"
+                   android:textSize="18sp"
+                   android:textStyle="bold" />
+           </LinearLayout>
+       </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
+
+
+
