@@ -1,5 +1,6 @@
 package com.jessica.estudosemdias.Model;
 
+import io.objectbox.annotation.Backlink;
 import io.objectbox.annotation.Entity;
 import io.objectbox.annotation.Id;
 import io.objectbox.relation.ToMany;
@@ -14,7 +15,7 @@ public class Disciplina {
     private double media;
     private double provaFinal;
     private ToOne<Usuario> aluno;
-    private ToMany<Nota> notas;
+    @Backlink private ToMany<Nota> notas;
 
     public Disciplina() {
     }
@@ -88,6 +89,7 @@ public class Disciplina {
 
 
     public double getMedia() {
+
         int totalDeProvas = getAluno().getTarget().getQtdProvas();
         double soma = 0;
         double mediaInstitucional = getAluno().getTarget().getMediaInstitucional();

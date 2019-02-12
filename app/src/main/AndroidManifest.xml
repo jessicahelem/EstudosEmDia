@@ -41,7 +41,7 @@
         <activity
             android:name=".activities.NotasActivity"
             android:label="Minhas Notas"
-            android:parentActivityName=".activities.MenuActivity" />
+            android:parentActivityName=".activities.DisciplinasActivity" />
         <activity
             android:name=".activities.DisciplinasActivity"
             android:label="Disciplinas"

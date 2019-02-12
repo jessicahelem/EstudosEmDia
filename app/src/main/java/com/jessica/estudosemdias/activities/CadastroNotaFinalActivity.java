@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.jessica.estudosemdias.Model.Disciplina;
 import com.jessica.estudosemdias.R;
@@ -32,7 +33,7 @@ public class CadastroNotaFinalActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         disciplinaBox = ((App)getApplication()).getBoxStore().boxFor(Disciplina.class);
-        idUsuarioLogado = getidUsuarioLogado();
+        idUsuarioLogado = getIdUsuarioLogado();
         disciplinaId = getIntent().getLongExtra("disciplinaId", -1);
 
         if(disciplinaId != -1) {
@@ -53,12 +54,15 @@ public class CadastroNotaFinalActivity extends AppCompatActivity {
             editNotaProvaFinal.setError("Somente valores de 0 a 10 são permitidos!");
         }
 
-        else {
+        else {try {
             disciplina.setProvaFinal(Double.valueOf(notaProvaFinal));
             disciplina.getAluno().setTargetId(idUsuarioLogado);
             disciplinaBox.put(disciplina);
 
             finish();
+        }catch (Exception e){
+            Toast.makeText(this, "aqui", Toast.LENGTH_SHORT).show();
+        }
         }
     }
 
@@ -67,8 +71,8 @@ public class CadastroNotaFinalActivity extends AppCompatActivity {
         finish();
     }
 
-    private long getidUsuarioLogado() {
-        SharedPreferences preferences = getSharedPreferences("boletim.file", MODE_PRIVATE);
+    private long getIdUsuarioLogado() {
+        SharedPreferences preferences = getSharedPreferences("estudosemdia.file", MODE_PRIVATE);
         long id = preferences.getLong("alunoId", -1);
 
         return id;
