@@ -7,13 +7,10 @@ import io.objectbox.relation.ToOne;
 @Entity
 public class Nota {
 
-    @Id
-    private long id;
+    @Id private long id;
     private double notaBimestral;
     ToOne<Disciplina> disciplina;
 
-    public Nota() {
-    }
 
     public void setId(long id){this.id=id;}
 
@@ -35,8 +32,6 @@ public class Nota {
     public void setDisciplina(ToOne<Disciplina> disciplina) {
         this.disciplina = disciplina;
     }
-
-
 
 
 

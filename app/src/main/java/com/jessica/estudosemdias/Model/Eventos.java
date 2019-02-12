@@ -14,7 +14,7 @@ public class Eventos {
     private Date data;
     private String hora;
     private String anotacao;
-    private ToOne<Usuario> usuario;
+    private ToOne<Usuario> aluno;
 
 
     public Eventos() {}
@@ -59,11 +59,11 @@ public class Eventos {
         return anotacao;
     }
 
-    public void setUsuario(ToOne<Usuario> usuario) {
-        this.usuario = usuario;
+    public void setAluno(ToOne<Usuario> aluno) {
+        this.aluno = aluno;
     }
 
-    public ToOne<Usuario> getUsuario() {
-        return usuario;
+    public ToOne<Usuario> getAluno() {
+        return aluno;
     }
 }

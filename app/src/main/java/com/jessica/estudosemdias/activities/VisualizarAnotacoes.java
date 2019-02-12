@@ -29,7 +29,7 @@ public class VisualizarAnotacoes extends AppCompatActivity {
         ButterKnife.bind(this);
 
         eventosBox = ((App)getApplication()).getBoxStore().boxFor(Eventos.class);
-        eventosId = getIntent().getLongExtra("EventosId", -1);
+        eventosId = getIntent().getLongExtra("eventosId", -1);
 
         if(eventosId != -1) {
             eventos = eventosBox.get(eventosId);

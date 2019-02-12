@@ -9,7 +9,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_margin="10dp">
     <com.prolificinteractive.materialcalendarview.MaterialCalendarView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/calendario"
@@ -18,7 +19,9 @@
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:textColorHint="#0085cb"
+        android:backgroundTint="#0085cb">
 
         <EditText
             android:id="@+id/edit_titulo"
@@ -30,7 +33,9 @@
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:textColorHint="#0085cb"
+        android:backgroundTint="#0085cb">
 
         <EditText
             android:id="@+id/edit_hora"

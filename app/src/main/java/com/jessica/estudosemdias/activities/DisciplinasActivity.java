@@ -99,7 +99,7 @@ public class DisciplinasActivity extends AppCompatActivity {
 
     private void removerTodos() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Boletim")
+        builder.setTitle("Estudos em Dia")
                 .setMessage("Deseja remover todas as disciplinas da lista?")
                 .setPositiveButton("SIM", new DialogInterface.OnClickListener() {
 

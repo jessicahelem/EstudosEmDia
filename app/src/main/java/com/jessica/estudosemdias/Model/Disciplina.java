@@ -12,7 +12,7 @@ public class Disciplina {
     private boolean disciplina_extra;
     private String professor;
     private double media;
-    private double prova_final;
+    private double provaFinal;
     private ToOne<Usuario> aluno;
     private ToMany<Nota> notas;
 
@@ -61,12 +61,12 @@ public class Disciplina {
         this.media = media;
     }
 
-    public double getProva_final() {
-        return prova_final;
+    public double getProvaFinal() {
+        return provaFinal;
     }
 
-    public void setProva_final(double prova_final) {
-        this.prova_final = prova_final;
+    public void setProvaFinal(double provaFinal) {
+        this.provaFinal = provaFinal;
     }
 
     public ToOne<Usuario> getAluno() {
@@ -98,8 +98,8 @@ public class Disciplina {
 
         this.media = soma / totalDeProvas;
 
-        if(prova_final >= mediaInstitucional) {
-            return prova_final;
+        if(provaFinal >= mediaInstitucional) {
+            return provaFinal;
         }
 
         return media;
@@ -143,7 +143,7 @@ public class Disciplina {
     public boolean estaDeProvaFinal() {
         double mediaInstitucional = getAluno().getTarget().getMediaInstitucional();
 
-        if(getMedia() < mediaInstitucional && prova_final == 0) {
+        if(getMedia() < mediaInstitucional && provaFinal == 0) {
             return true;
         }
 

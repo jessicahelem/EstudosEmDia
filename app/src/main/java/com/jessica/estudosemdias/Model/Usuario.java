@@ -15,19 +15,9 @@ public class Usuario {
     private double mediaInstitucional;
     private double mediaPessoal;
     final private static int qtdProvas = 4;
-    @Backlink
-    private ToMany<Disciplina> disciplinas;
+    @Backlink private ToMany<Disciplina> disciplinas;
     @Backlink private ToMany<Eventos> eventos;
 
-
-
-    public Usuario(){
-
-    }
-
-    public Usuario(String nome, String senha){
-
-    }
 
     public void setId(long id) {
         this.id = id;

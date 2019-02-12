@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.jessica.estudosemdias.Model.Eventos;
+import com.jessica.estudosemdias.Model.Usuario;
 import com.jessica.estudosemdias.R;
 import com.jessica.estudosemdias.dal.App;
 import com.jessica.estudosemdias.fragment.TimePickerFragment;
@@ -95,7 +96,7 @@ public class CadastroEventos extends AppCompatActivity {
             agendamento.setData(data);
             agendamento.setHora(hora);
             agendamento.setTitulo(titulo);
-            agendamento.getUsuario().setTargetId(idAlunoLogado);
+            agendamento.getAluno().setTargetId(idAlunoLogado);
 
             agendamentoBox.put(agendamento);
 
@@ -104,12 +105,10 @@ public class CadastroEventos extends AppCompatActivity {
     }
 
     private long getIdAlunoLogado() {
-        SharedPreferences preferences = getSharedPreferences("boletim.file", MODE_PRIVATE);
+        SharedPreferences preferences = getSharedPreferences("estudosemdia.file", MODE_PRIVATE);
         long id = preferences.getLong("alunoId", -1);
 
         return id;
-
-
     }
-}
 
+}

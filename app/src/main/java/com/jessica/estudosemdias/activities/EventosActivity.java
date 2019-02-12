@@ -48,7 +48,7 @@ public class EventosActivity extends AppCompatActivity {
         protected void onResume() {
             super.onResume();
 
-            List<Eventos> eventos = eventosBox.query().equal(Eventos_.usuarioId, idUsuarioLogado).build().find();
+            List<Eventos> eventos = eventosBox.query().equal(Eventos_.alunoId, idUsuarioLogado).build().find();
             recyclerEventos.setLayoutManager(new LinearLayoutManager(this));
             ListaEventosAdapter adapter = new ListaEventosAdapter(this, eventos, eventosBox);
             recyclerEventos.setAdapter(adapter);
@@ -58,17 +58,12 @@ public class EventosActivity extends AppCompatActivity {
         public void abrirCadastroAgendamentos(View view) {
             startActivity(new Intent(this, CadastroEventos.class));
 
-            view.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    recyclerEventos.setVisibility(View.VISIBLE);
-                }
-            }, 500);
+            view.postDelayed(() -> recyclerEventos.setVisibility(View.VISIBLE), 500);
         }
 
         private long getidUsuarioLogado() {
             SharedPreferences preferences = getSharedPreferences("estudosemdia.file", MODE_PRIVATE);
-            long id = preferences.getLong("usuarioId", -1);
+            long id = preferences.getLong("alunoId", -1);
 
             return id;
         }
@@ -95,7 +90,7 @@ public class EventosActivity extends AppCompatActivity {
             builder.setTitle("Estudos em Dia")
                     .setMessage("Deseja remover todos os agendamentos da lista?")
                     .setPositiveButton("SIM", (dialogInterface, i) -> {
-                        List<Eventos> eventos = eventosBox.query().equal(Eventos_.usuarioId, idUsuarioLogado).build().find();
+                        List<Eventos> eventos = eventosBox.query().equal(Eventos_.alunoId, idUsuarioLogado).build().find();
                         eventosBox.remove(eventos);
                         recyclerEventos.setVisibility(View.GONE);
                         Snackbar.make(recyclerEventos, "Todos os eventos foram removidos!", Snackbar.LENGTH_LONG).show();

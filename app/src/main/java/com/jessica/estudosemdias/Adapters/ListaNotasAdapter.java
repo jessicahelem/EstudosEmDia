@@ -22,8 +22,8 @@ import io.objectbox.Box;
 
 public class ListaNotasAdapter extends RecyclerView.Adapter<ListaNotasAdapter.ViewHolder> {
     private Context context;
-    private Nota nota;
     private List<Nota> notas;
+    private  Nota nota;
     private Box<Nota> notaBox;
 
     public ListaNotasAdapter(Context context, List<Nota> notas, Box<Nota> notaBox) {
@@ -88,9 +88,6 @@ public class ListaNotasAdapter extends RecyclerView.Adapter<ListaNotasAdapter.Vi
             popupMenu.getMenuInflater().inflate(R.menu.popup_menu_notas, popupMenu.getMenu());
 
             popupMenu.setOnMenuItemClickListener(item -> {
-                //if(item.getItemId() == R.id.editar_nota) {
-                //    editar(itemView, nota, position);
-                //}
 
                 if (item.getItemId() == R.id.remover_nota) {
                     remover(itemView, nota, position);
@@ -105,17 +102,11 @@ public class ListaNotasAdapter extends RecyclerView.Adapter<ListaNotasAdapter.Vi
         });
     }
 
-    //TODO: Ajeitar o editar das notas
-    /*public void editar(View view, Nota nota, int position) {
-        Intent intent = new Intent(context, CadastroNotasActivity.class);
-        intent.putExtra("notaId", nota.getId());
-        context.startActivity(intent);
-        notifyItemChanged(position);
-    }*/
+
 
     public void remover(View view, Nota nota, int position) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this.context);
-        builder.setTitle("Boletim");
+        builder.setTitle("estudosemdia");
         builder.setMessage("Deseja remover a nota da lista?");
 
         builder.setPositiveButton("SIM", (dialog, which) -> {

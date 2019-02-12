@@ -50,7 +50,8 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="scalingPercent" value="56" />
+                                                <entry key="scalingPercent" value="13" />
+                                                <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -63,6 +64,7 @@
                                               <map>
                                                 <entry key="color" value="000000" />
                                                 <entry key="scalingPercent" value="73" />
+                                                <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -72,10 +74,10 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="backgroundLayerName" value="ic_launcher_background_icon" />
-                                      <entry key="foregroundImage" value="$USER_HOME$/Downloads/iconfinder_set_of_three_books_1741315(1).svg" />
-                                      <entry key="foregroundLayerName" value="ic_launcher_foreground" />
-                                      <entry key="outputName" value="ic_launcher_icone" />
+                                      <entry key="backgroundLayerName" value="ic_launcher_background_prova_kkk" />
+                                      <entry key="foregroundImage" value="$USER_HOME$/Downloads/if_Test-paper-24_103838(2).png" />
+                                      <entry key="foregroundLayerName" value="ic_launcher_foreground_prova_k" />
+                                      <entry key="outputName" value="ic_launcher_prova_kk" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -135,25 +137,7 @@
         </entry>
         <entry key="vectorWizard">
           <value>
-            <PersistentState>
-              <option name="children">
-                <map>
-                  <entry key="vectorAssetStep">
-                    <value>
-                      <PersistentState>
-                        <option name="values">
-                          <map>
-                            <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_iconfinder_icon_book" />
-                            <entry key="sourceFile" value="$USER_HOME$/Downloads/iconfinder-icon(10).svg" />
-                          </map>
-                        </option>
-                      </PersistentState>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </PersistentState>
+            <PersistentState />
           </value>
         </entry>
       </map>

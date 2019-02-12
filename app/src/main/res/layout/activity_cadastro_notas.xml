@@ -12,7 +12,6 @@
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Disciplina"
         android:textColorHint="#0085cb"
         android:layout_marginTop="30dp">
 
@@ -21,8 +20,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:inputType="text"
-            android:textColorHint="#0085cb" />
+            android:inputType="numberDecimal"
+            android:textColorHint="#0085cb"
+            android:hint="Nota Bimestral"/>
 
     </android.support.design.widget.TextInputLayout>
 
@@ -50,7 +50,7 @@
             android:id="@+id/btn_cancelar_nota"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/botao"
+            android:background="@drawable/botao_vermelho"
             android:textColor="#fff"
             android:layout_marginStart="50dp"
             android:text="Cancelar"

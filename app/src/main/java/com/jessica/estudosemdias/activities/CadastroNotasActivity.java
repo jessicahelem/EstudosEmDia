@@ -61,6 +61,7 @@ public class CadastroNotasActivity extends AppCompatActivity {
             nota.setNotaBimestral(Double.valueOf(notaBim));
             nota.getDisciplina().setTargetId(disciplinaId);
 
+            finish();
             notaBox.put(nota);
             finish();
         }

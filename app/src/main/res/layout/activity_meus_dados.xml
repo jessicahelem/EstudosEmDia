@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="20dp"
+    android:layout_margin="10dp"
     tools:context=".activities.MeusDadosActivity">
 
 
@@ -17,28 +17,6 @@
         android:layout_marginTop="50dp"
         android:src="@drawable/ic_iconfinder_icon_student"/>
 
-    <LinearLayout
-        android:layout_width="360dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="40dp"
-        android:orientation="horizontal"
-       >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="3dp"
-            android:text="Email"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/txt_ver_email"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp" />
-
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -52,7 +30,8 @@
             android:layout_marginEnd="3dp"
             android:text="Nome"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+           />
 
         <TextView
             android:id="@+id/txt_ver_nome"
@@ -111,7 +90,8 @@
         android:layout_width="match_parent"
         android:layout_height="28dp"
         android:layout_margin="5dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        >
 
         <TextView
             android:layout_width="wrap_content"

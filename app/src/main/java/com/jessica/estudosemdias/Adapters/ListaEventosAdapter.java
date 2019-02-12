@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.jessica.estudosemdias.Model.Eventos;
 import com.jessica.estudosemdias.R;
+import com.jessica.estudosemdias.activities.CadastroAnotacoes;
 import com.jessica.estudosemdias.activities.VisualizarAnotacoes;
 import com.jessica.estudosemdias.activities.CadastroEventos;
 
@@ -106,8 +107,8 @@ public class ListaEventosAdapter extends RecyclerView.Adapter<ListaEventosAdapte
     }
 
     public void adicionarAnotacao(View view, Eventos evento, int position) {
-        Intent intent = new Intent(context, CadastroEventos.class);
-        intent.putExtra("eventosId", evento.getId());
+        Intent intent = new Intent(context, CadastroAnotacoes.class);
+        intent.putExtra("agendamentoId", evento.getId());
         context.startActivity(intent);
         notifyItemChanged(position);
     }
@@ -115,7 +116,7 @@ public class ListaEventosAdapter extends RecyclerView.Adapter<ListaEventosAdapte
     public void editar(View view, Eventos evento, int position) {
         Intent intent = new Intent(context, CadastroEventos.class);
 
-        intent.putExtra("eventosId", evento.getId());
+        intent.putExtra("agendamentoId", evento.getId());
         context.startActivity(intent);
         notifyItemChanged(position);
     }

@@ -4,88 +4,124 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.CadastroAlunoActivity"
+    android:background="@drawable/back"
     android:orientation="vertical"
-    android:background="@drawable/back">
+    android:padding="30dp"
+    tools:context=".activities.CadastroAlunoActivity">
 
-    <EditText
-        android:id="@+id/nome"
-        android:layout_width="330dp"
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nome"
-        android:inputType="text"
-        android:backgroundTint="#0085cb"
-        android:maxLines="1"
-        android:singleLine="true"
         android:textColorHint="#0085cb"
-        android:layout_marginTop="90dp"
+        >
+    <EditText
+        android:id="@+id/nome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:inputType="text"
+        android:textColorHint="#0085cb"
+        android:maxLines="1"
         android:layout_gravity="center"
-        />
+        android:singleLine="true"
+        android:layout_marginTop="50dp"
+       />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Senha"
+        android:textColorHint="#0085cb">
+
 
     <EditText
         android:id="@+id/senha"
-        android:layout_width="330dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Senha"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
         android:backgroundTint="#0085cb"
         android:inputType="textPassword"
         android:maxLines="1"
         android:singleLine="true"
-        android:textColorHint="#0085cb"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center"/>
+        android:textColorHint="#0085cb" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Instituição"
+        android:textColorHint="#0085cb">
+
+
 
     <EditText
         android:id="@+id/instituicao"
-        android:layout_width="330dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nome da Instituição"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
         android:backgroundTint="#0085cb"
         android:inputType="text"
         android:maxLines="1"
         android:singleLine="true"
-        android:textColorHint="#0085cb"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center"
-        />
+        android:textColorHint="#0085cb" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Média da Instituição"
+        android:textColorHint="#0085cb">
+
 
     <EditText
         android:id="@+id/media_institucional"
-        android:layout_width="330dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Média da Instituição"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#0085cb"
         android:inputType="numberDecimal"
         android:maxLines="1"
         android:singleLine="true"
-        android:textColorHint="#0085cb"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center"
-        android:backgroundTint="#0085cb"/>
+        android:textColorHint="#0085cb" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Média Pessoal"
+        android:textColorHint="#0085cb">
+
 
     <EditText
         android:id="@+id/media_pessoal"
-        android:layout_width="330dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Média Pessoal"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
         android:backgroundTint="#0085cb"
-        android:textColorHint="#0085cb"
         android:inputType="numberDecimal"
         android:maxLines="1"
         android:singleLine="true"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center"/>
+        android:textColorHint="#0085cb" />
+    </android.support.design.widget.TextInputLayout>
 
     <Button
         android:id="@+id/cadastrar_button"
-        android:layout_width="340dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginTop="25dp"
+        android:background="@drawable/botao"
         android:text="Cadastrar"
         android:textColor="#fff"
-        android:textStyle="bold"
-        android:layout_gravity="center"
-        android:background="@drawable/botao"/>
-
+        android:textStyle="bold" />
 
 
 </LinearLayout>

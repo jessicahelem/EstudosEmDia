@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".activities.LoginActivity"
     android:orientation="vertical"
+    android:padding="30dp"
     android:background="@drawable/back">
 
     <TextView
@@ -14,38 +15,54 @@
         android:text="Estudos em Dia"
         android:layout_gravity="center"
         android:textSize="40sp"
-        android:textColor="#0085cb"
+        android:textColor="#fff"
         android:layout_marginTop="70dp"
         />
-
-
-    <EditText
-        android:id="@+id/usuario"
-        android:layout_width="350dp"
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="Nome"
         android:textColorHint="#0085cb"
-        android:hint="Usuário"
-        android:inputType="text"
-        android:backgroundTint="#0085cb"
-        android:maxLines="1"
-        android:singleLine="true"
-        android:layout_marginTop="90dp"
-        android:layout_gravity="center"
-        />
-    <EditText
-        android:id="@+id/senha"
-        android:layout_width="350dp"
+        android:layout_marginTop="50dp"
+        >
+        <EditText
+            android:id="@+id/usuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:inputType="text"
+            android:textColorHint="#0085cb"
+            android:maxLines="1"
+            android:layout_gravity="center"
+            android:singleLine="true"
+
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColorHint="#0085cb"
         android:hint="Senha"
-        android:backgroundTint="#0085cb"
-        android:inputType="textPassword"
-        android:maxLines="1"
-        android:singleLine="true"
-        android:layout_marginTop="30dp"
-        android:layout_gravity="center">
+        android:textColorHint="#0085cb">
 
-    </EditText>
+
+        <EditText
+            android:id="@+id/senha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#0085cb"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColorHint="#0085cb" />
+    </android.support.design.widget.TextInputLayout>
+
+
+
+
+
     <Button
         android:id="@+id/login_button"
         android:layout_width="350dp"
@@ -66,6 +83,7 @@
         android:layout_marginTop="20dp"
         android:text="Cadastre-se"
         android:textSize="20sp"
+        android:textStyle="bold"
 
         />
 

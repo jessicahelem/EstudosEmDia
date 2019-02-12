@@ -31,11 +31,9 @@ import io.objectbox.Box;
 
 public  class ListaDisciplinasAdapter extends RecyclerView.Adapter<ListaDisciplinasAdapter.ViewHolder> {
     private Context context;
-    private Disciplina disciplina;
     private List<Disciplina> disciplinas;
     private Box<Disciplina> disciplinaBox;
-    private Nota nota;
-    private Box<Nota> notaBox;
+
 
     public ListaDisciplinasAdapter(Context context, List<Disciplina> disciplinas, Box<Disciplina> disciplinaBox) {
         this.context = context;
@@ -44,8 +42,7 @@ public  class ListaDisciplinasAdapter extends RecyclerView.Adapter<ListaDiscipli
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        @BindView(R.id.txt_nome_disciplina)
-        TextView txtNomeDisciplina;
+        @BindView(R.id.txt_nome_disciplina) TextView txtNomeDisciplina;
         @BindView(R.id.txt_nome_professor)
         TextView txtNomeProfessor;
         @BindView(R.id.txt_msg)
@@ -128,44 +125,42 @@ public  class ListaDisciplinasAdapter extends RecyclerView.Adapter<ListaDiscipli
             PopupMenu popupMenu = new PopupMenu(context, view);
             popupMenu.getMenuInflater().inflate(R.menu.popup_menu_disciplinas, popupMenu.getMenu());
 
-            popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                @Override
-                public boolean onMenuItemClick(MenuItem item) {
-                    if (item.getItemId() == R.id.adicionar_notas) {
-                        if (tamanhoDaListaDeNotas == totalDeProvas) {
-                            Snackbar.make(view, "Não é possível adicionar mais notas!", Snackbar.LENGTH_LONG).show();
-
-                        } else {
-                            if (ListaDisciplinasAdapter.this.disciplinas.get(position).isDisciplina_extra()) {
-                                Snackbar.make(view, "Disciplinas extras somente serão exibidas, não sendo possível adicionar notas.", Snackbar.LENGTH_LONG).show();
-                            } else {
-                                ListaDisciplinasAdapter.this.adicionarNotas(itemView, disciplina, position);
-                            }
-
-                        }
-                    } else if (item.getItemId() == R.id.adicionar_prova_final) {
-                        if (tamanhoDaListaDeNotas < totalDeProvas) {
-                            if (ListaDisciplinasAdapter.this.disciplinas.get(position).isDisciplina_extra()) {
-                                Snackbar.make(view, "Você não pode adicionar nota final em disciplinas extras!", Snackbar.LENGTH_LONG).show();
-                            } else {
-                                Snackbar.make(view, "Adicione todas as notas antes de cadastrar a nota final!", Snackbar.LENGTH_LONG).show();
-                            }
-                        } else {
-                            if (disciplina.getMedia() >= mediaInstitucional) {
-                                Snackbar.make(view, "Você não precisa de Prova Final!", Snackbar.LENGTH_LONG).show();
-                            } else {
-                                ListaDisciplinasAdapter.this.adicionarNotaFinal(itemView, disciplina, position);
-                            }
-                        }
-                    } else if (item.getItemId() == R.id.editar_disciplina) {
-                        ListaDisciplinasAdapter.this.editar(itemView, disciplina, position);
-                    } else if (item.getItemId() == R.id.remover_disciplina) {
-                        ListaDisciplinasAdapter.this.remover(itemView, disciplina, position);
+            popupMenu.setOnMenuItemClickListener(item -> {
+                if (item.getItemId() == R.id.adicionar_notas) {
+                    if (tamanhoDaListaDeNotas == totalDeProvas) {
+                        Snackbar.make(view, "Não é possível adicionar mais notas!", Snackbar.LENGTH_LONG).show();
 
                     }
+                    else {
+                        if (this.disciplinas.get(position).isDisciplina_extra()) {
+                            Snackbar.make(view, "Disciplinas extras somente serão exibidas, não sendo possível adicionar notas.", Snackbar.LENGTH_LONG).show();
+                        } else {
+                            adicionarNotas(itemView, disciplina, position);
+                        }
 
-                    return false;
+                    }
+                } else if (item.getItemId() == R.id.adicionar_prova_final) {
+                    if (tamanhoDaListaDeNotas < totalDeProvas) {
+                        if (ListaDisciplinasAdapter.this.disciplinas.get(position).isDisciplina_extra()) {
+                            Snackbar.make(view, "Você não pode adicionar nota final em disciplinas extras!", Snackbar.LENGTH_LONG).show();
+                        } else {
+                            Snackbar.make(view, "Adicione todas as notas antes de cadastrar a nota final!", Snackbar.LENGTH_LONG).show();
+                        }
+                    } else {
+                        if (disciplina.getMedia() >= mediaInstitucional) {
+                            Snackbar.make(view, "Você não precisa de Prova Final!", Snackbar.LENGTH_LONG).show();
+                        } else {
+                            adicionarNotaFinal(itemView, disciplina, position);
+                        }
+                    }
+                } else if (item.getItemId() == R.id.editar_disciplina) {
+                    ListaDisciplinasAdapter.this.editar(itemView, disciplina, position);
+                } else if (item.getItemId() == R.id.remover_disciplina) {
+                    ListaDisciplinasAdapter.this.remover(itemView, disciplina, position);
+
                 }
+
+                return false;
             });
 
             popupMenu.show();
@@ -199,7 +194,7 @@ public  class ListaDisciplinasAdapter extends RecyclerView.Adapter<ListaDiscipli
 
     public void remover(final View view, final Disciplina disciplina, final int position) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this.context);
-        builder.setTitle("Boletim");
+        builder.setTitle("Estudos em Dia");
         builder.setMessage("Deseja remover a disciplina da lista?");
 
         builder.setPositiveButton("SIM", new DialogInterface.OnClickListener() {

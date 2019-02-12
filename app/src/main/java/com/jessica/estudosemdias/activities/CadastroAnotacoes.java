@@ -21,8 +21,8 @@ public class CadastroAnotacoes extends AppCompatActivity {
 
     private Box<Eventos> eventosBox;
     private Eventos eventos;
-    private long idUsuarioLogado;
-    private long eventosId;
+    private long idAlunoLogado;
+    private long agendamentoId;
 
 
     @Override
@@ -33,11 +33,11 @@ public class CadastroAnotacoes extends AppCompatActivity {
         ButterKnife.bind(this);
 
         eventosBox = ((App)getApplication()).getBoxStore().boxFor(Eventos.class);
-       idUsuarioLogado = getIdAlunoLogado();
-        eventosId = getIntent().getLongExtra("eventosId", -1);
+       idAlunoLogado= getIdAlunoLogado();
+        agendamentoId = getIntent().getLongExtra("agendamentoId", -1);
 
-        if(eventosId != -1) {
-            eventos = eventosBox.get(eventosId);
+        if(agendamentoId != -1) {
+            eventos = eventosBox.get(agendamentoId);
             editAnotacao.setText(eventos.getAnotacao());
         }
     }
@@ -46,7 +46,7 @@ public class CadastroAnotacoes extends AppCompatActivity {
     public void salvarAnotacao(View view) {
         String anotacao = editAnotacao.getText().toString();
         eventos.setAnotacao(anotacao);
-        eventos.getUsuario().setTargetId(idUsuarioLogado);
+        eventos.getAluno().setTargetId(idAlunoLogado);
         eventosBox.put(eventos);
 
         finish();
@@ -59,7 +59,7 @@ public class CadastroAnotacoes extends AppCompatActivity {
 
     private long getIdAlunoLogado() {
         SharedPreferences preferences = getSharedPreferences("estudosemdia.file", MODE_PRIVATE);
-        long id = preferences.getLong("usuarioId", -1);
+        long id = preferences.getLong("alunoId", -1);
 
         return id;
     }

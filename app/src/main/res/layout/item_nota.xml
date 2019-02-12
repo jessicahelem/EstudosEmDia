@@ -40,7 +40,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Segunda Nota"
+                    android:text="Nota"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
