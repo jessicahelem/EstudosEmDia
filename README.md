@@ -12,38 +12,57 @@ O projeto proposto é um aplicativo android com o intuito de acompanhar o rendim
 <h2>Classes</h2>
 
 **Usuário**
-    -Id
-    -Nome
-    -Senha
-    -Instituição
-    -Média da escola
-    -Média pessoal 
-    -Quantidade de provas 
-    -Lista de disciplina
-    -Lista de lembretes.
+  -Atributos:
+    - Id;
+    - Nome;
+    - Senha;
+    - Instituição;
+    - Média da escola;
+    - Média pessoal; 
+    - Quantidade de provas; 
+    - Lista de disciplina;
+    - Lista de lembretes.
     
 **Eventos**
-    -Id
-    -Título
-    -Data 
-    -Hora 
-    -Anotação
-    -Lista de Usuários
+   -Atributos:
+    - Id;
+    - Título;
+    - Data; 
+    - Hora; 
+    - Anotação;
+    - Lista de Usuários;
     
 **Disciplina** 
-    -Id
-    -Nome
-    -Professor
-    -Média 
-    -Disciplina extra
-    -Lista de notas
-    -Prova final
-    -Lista de usuários
+   -Atributos: 
+    - Id;
+    - Nome;
+    - Professor;
+    - Média; 
+    - Disciplina extra;
+    - Lista de notas;
+    - Prova final;
+    - Lista de usuários;
     
     
  **Nota**
-    - Id
-    - Nota bimestral
-    - Lista disciplina
-    -Lista de notas
+   -Atributos: 
+    - Id;
+    - Nota bimestral;
+    - Lista disciplina;
+    - Lista de notas;
     
+
+<h2>Funcionalidades</h2>
+
+   - Cadastro e login do usuário;
+   - Cadastrar  disciplinas;
+   - Inserir notas;
+   - Visualizar rendimento escolar:
+   - Notas acima e abaixo da média;
+   - Aprovado ou reprovado na disciplina.
+   - Criar lembretes.
+
+<h2>Requisitos</h2>
+
+   - Smartphone com android 6.0 ou superior.
+
