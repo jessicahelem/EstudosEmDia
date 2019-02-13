@@ -11,46 +11,41 @@ O projeto proposto é um aplicativo android com o intuito de acompanhar o rendim
 
 <h2>Classes</h2>
 
-**Usuário**
-  -Atributos:
-    - Id;
-    - Nome;
-    - Senha;
-    - Instituição;
-    - Média da escola;
-    - Média pessoal; 
-    - Quantidade de provas; 
-    - Lista de disciplina;
-    - Lista de lembretes.
-    
-**Eventos**
-   -Atributos:
-    - Id;
-    - Título;
-    - Data; 
-    - Hora; 
-    - Anotação;
-    - Lista de Usuários;
-    
-**Disciplina** 
-   -Atributos: 
-    - Id;
-    - Nome;
-    - Professor;
-    - Média; 
-    - Disciplina extra;
-    - Lista de notas;
-    - Prova final;
-    - Lista de usuários;
-    
-    
- **Nota**
-   -Atributos: 
-    - Id;
-    - Nota bimestral;
-    - Lista disciplina;
-    - Lista de notas;
-    
+<p><strong>Usuário</strong><br>
+-Atributos:<br>
+- Id<br>
+- Nome;<br>
+- Senha;<br>
+- Instituição;<br>
+- Média da escola;<br>
+- Média pessoal;<br>
+- Quantidade de provas;<br>
+- Lista de disciplina;<br>
+- Lista de lembretes.</p>
+<p><strong>Eventos</strong><br>
+-Atributos:<br>
+- Id;<br>
+- Título;<br>
+- Data;<br>
+- Hora;<br>
+- Anotação;<br>
+- Lista de Usuários;</p>
+<p><strong>Disciplina</strong><br>
+-Atributos:<br>
+- Id;<br>
+- Nome;<br>
+- Professor;<br>
+- Média;<br>
+- Disciplina extra;<br>
+- Lista de notas;<br>
+- Prova final;<br>
+- Lista de usuários;</p>
+<p><strong>Nota</strong><br>
+-Atributos:<br>
+- Id;<br>
+- Nota bimestral;<br>
+- Lista disciplina;<br>
+- Lista de notas;</p>
 
 <h2>Funcionalidades</h2>
 
