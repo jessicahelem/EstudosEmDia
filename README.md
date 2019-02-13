@@ -13,7 +13,7 @@ O projeto proposto é um aplicativo android com o intuito de acompanhar o rendim
 
 <p><strong>Usuário</strong><br>
 -Atributos:<br>
-- Id<br>
+- Id;<br>
 - Nome;<br>
 - Senha;<br>
 - Instituição;<br>
