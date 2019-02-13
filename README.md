@@ -11,11 +11,39 @@ O projeto proposto é um aplicativo android com o intuito de acompanhar o rendim
 
 <h2>Classes</h2>
 
-<h4>Aluno</h4>
-      Atributos: nome, enha, instituição, média da escola, média pessoal, quantidade       de provas, lista de disciplina, lista de         lembretes.
-2. Lembrete
-Atributos: título, data, hora, anotação.
-3. Disciplina 
-    Atributos: nome, professor, media, disciplina extra,  lista de notas
-4. Nota
-    Atributos: nota bimestral, lista de disciplinas.
+**Usuário**
+    -Id
+    -Nome
+    -Senha
+    -Instituição
+    -Média da escola
+    -Média pessoal 
+    -Quantidade de provas 
+    -Lista de disciplina
+    -Lista de lembretes.
+    
+**Eventos**
+    -Id
+    -Título
+    -Data 
+    -Hora 
+    -Anotação
+    -Lista de Usuários
+    
+**Disciplina** 
+    -Id
+    -Nome
+    -Professor
+    -Média 
+    -Disciplina extra
+    -Lista de notas
+    -Prova final
+    -Lista de usuários
+    
+    
+ **Nota**
+    - Id
+    - Nota bimestral
+    - Lista disciplina
+    -Lista de notas
+    
