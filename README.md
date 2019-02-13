@@ -4,8 +4,6 @@ Aplicativo android
 
 <h2>Visão geral</h2>
 
-	
-
 <p>
 O projeto proposto é um aplicativo android com o intuito de acompanhar o rendimento escolar do aluno. O usuário poderá fazer seu cadastro e consequentemente seu login, inserir suas disciplinas, notas escolares, a média da escola e sua própria média, além de inserir lembretes. Para a persistência dos dados será utilizado o banco de dados objectbox. </p> 
 
@@ -46,6 +44,11 @@ O projeto proposto é um aplicativo android com o intuito de acompanhar o rendim
 - Nota bimestral;<br>
 - Lista disciplina;<br>
 - Lista de notas;</p>
+
+<h2>Diagrama de Classe</h2>
+
+
+
 
 <h2>Funcionalidades</h2>
 
