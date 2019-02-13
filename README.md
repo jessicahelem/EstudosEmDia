@@ -60,4 +60,7 @@ O projeto proposto é um aplicativo android com o intuito de acompanhar o rendim
 <h2>Requisitos</h2>
 
    - Smartphone com android 6.0 ou superior.
+   
+ <h2> StoryBoard</h2>
+ 
 
