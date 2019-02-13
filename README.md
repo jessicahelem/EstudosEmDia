@@ -47,7 +47,7 @@ O projeto proposto é um aplicativo android com o intuito de acompanhar o rendim
 
 <h2>Diagrama de Classe</h2>
 
-
+![Alt Text](https://github.com/jessicahelem/EstudosEmDia/blob/master/imagens/diagrama%20app.jpg)
 
 
 <h2>Funcionalidades</h2>
